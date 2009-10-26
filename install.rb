@@ -18,5 +18,5 @@ SOURCE_DIR = File.join(File.dirname($0), "lib/zip")
 files.each { 
   |filename|
   installPath = File.join(INSTALL_DIR, filename)
-  FileUtils::install(File.join(SOURCE_DIR, filename), installPath, 0644, true)
+  FileUtils::install(File.join(SOURCE_DIR, filename), installPath, :mode=>0644, :verbose=>true)
 }
